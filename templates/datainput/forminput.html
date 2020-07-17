@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Csvexport/style.css' %}">
+    <title>Random Alpha Generator</title>
+</head>
+{% block body %}
+<body>
+	<form method="post">
+	<div class="container">
+		<div class="text-center">
+			<div>
+				{% load static %}
+				<img src="{% static "Csvexport/mark.png" %}" alt="My image" style="width:109px;height:90px;">
+				<h1>Random Alpha Generator</h1>
+			</div>
+		</div>
+		{% csrf_token %}
+		<div class="corn">
+			<h4>Primary Settings</h4>	        
+	        <label>stringLength</label>{{ form.stringLength}}
+	        <label>density</label>{{ form.density}}<br>
+	        <label>total_words</label>{{ form.total_words}}
+        </div>
+        <div class="corn">
+        	<h4>Keyword Settings</h4>
+	        <label>main_keywords</label><br>{{ form.main_keyword }}
+	        <br>
+	        <label>supporting_words</label><br>{{ form.supporting_words}}	        
+		</div>
+		<div class="corn">
+			<h4>Other Settings</h4>
+			<label>supporting_density</label>{{ form.supporting_density}}
+	        <label>p_tags</label>{{ form.p_tags}}	        	
+		</div>
+		<div class="corn_back">
+			<h2><button type="submit" class="corn_button">Export generated csv</button></h2>
+		</div>
+	</div>
+	</form>
+</body>
+{% endblock %}
+</html>

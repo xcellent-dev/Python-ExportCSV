@@ -1,0 +1,13 @@
+stringLength = 8
+
+density = 5
+
+total_words = 1300
+
+main_keyword = peluqueria burlada, peluqueria burgos, peluqueria toledo, peluqueria santander, peluqueria leon, peluqueria albacete, peluqueria terrassa, peluqueria ciudad real, peluqueria pamplona, peluqueria palencia, peluqueria estepona, peluqueria girona, peluqueria caceres, peluquería madrid, peluqueria logroño
+
+supporting_words = corte,mujer,lavado,centro,peluquería,hombre,mapa,pelo,mostrar,tratamientos,peinado
+
+supporting_density = 0.3
+
+p_tags = 11
